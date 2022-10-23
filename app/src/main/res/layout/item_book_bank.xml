@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bookbank"
+            type="com.ktb.ktbnext.domain.model.account.BookBank" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_normal"
+        android:layout_marginHorizontal="@dimen/spacing_normal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="@dimen/elevation_normal"
+            app:cardCornerRadius="@dimen/corner_normal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_book_bank_card"
+                android:padding="@dimen/spacing_normal">
+
+                <TextView
+                    android:id="@+id/text_book_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:text="@{bookbank.name}"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="FirstName LastName"/>
+
+                <TextView
+                    android:id="@+id/text_book_bank_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:text="@{bookbank.type}"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="AccountType"/>
+
+                <TextView
+                    android:id="@+id/text_book_bank_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:text="@{bookbank.number}"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text_book_bank_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="XXX-X-XX555-1"/>
+
+                <TextView
+                    android:id="@+id/text_book_bank_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:text="@string/main"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:isVisible="@{bookbank.isMain}"
+                    app:layout_constraintTop_toBottomOf="@+id/text_book_bank_type"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_current_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:text="@string/current_balance_thb"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text_book_bank_number"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_book_bank_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:text="@{bookbank.currentBalance}"
+                    android:textSize="@dimen/text_xlarge"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/text_current_balance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="57,000.00"/>
+
+                <TextView
+                    android:id="@+id/text_available_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text="@string/available_balance_thb"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/text_book_bank_balance"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_available_balance_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text="@{bookbank.availableBalance}"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/white"
+                    android:gravity="end"
+                    app:layout_constraintTop_toBottomOf="@+id/text_book_bank_balance"
+                    app:layout_constraintStart_toEndOf="@+id/text_available_balance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="47,599.00"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

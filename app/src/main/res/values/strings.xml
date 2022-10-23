@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">KTBNext</string>
+    <string name="app_name">Krungthai NEXT</string>
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_services">Services</string>
+    <string name="title_setting">Settings</string>
+    <string name="home_fragment">Home Screen</string>
+    <string name="scan_fragment">Scan Screen</string>
+    <string name="services_fragment">Services Screen</string>
+    <string name="setting_fragment">Setting Screen</string>
+    <string name="deposit">Deposit</string>
+    <string name="main">Main</string>
+    <string name="current_balance_thb">Current Balance (THB)</string>
+    <string name="available_balance_thb">Available balance (THB)</string>
+
 </resources>
