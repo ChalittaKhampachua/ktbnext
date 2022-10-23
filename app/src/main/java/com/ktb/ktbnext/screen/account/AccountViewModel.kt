@@ -17,8 +17,8 @@ class AccountViewModel(
     private val transactionUseCase: TransactionUseCase,
 ): ViewModel() {
 
-    private val bookBankLiveData = MutableLiveData<List<BookBank>>()
-    private val transactionLiveData = MutableLiveData<List<Transaction>>()
+    val bookBankLiveData = MutableLiveData<List<BookBank>>()
+    val transactionLiveData = MutableLiveData<List<Transaction>>()
     val accountUIDataSource = MediatorLiveData<AccountUI?>()
 
     init {
@@ -44,7 +44,7 @@ class AccountViewModel(
         fetchTransaction()
     }
 
-    private fun fetchBookBank() {
+    fun fetchBookBank() {
         viewModelScope.launch {
             bookBankUseCase.execute(Unit)
                 .onSuccess {
@@ -56,7 +56,7 @@ class AccountViewModel(
         }
     }
 
-    private fun fetchTransaction() {
+    fun fetchTransaction() {
         viewModelScope.launch {
             transactionUseCase.execute(Unit)
                 .onSuccess {

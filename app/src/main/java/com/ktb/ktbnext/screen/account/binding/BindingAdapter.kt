@@ -2,22 +2,26 @@ package com.ktb.ktbnext.screen.account.binding
 
 import android.view.View
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 
 @BindingAdapter("isVisible")
-fun bindingIsVisible(view: View, isVisible: Boolean) {
+fun bindIsVisible(view: View, isVisible: Boolean) {
     view.isVisible = isVisible
 }
 
 @BindingAdapter("textAmount")
-fun bindingTextAmount(view: TextView, textAmount: String?) {
+fun bindTextAmount(view: TextView, textAmount: String?) {
     view.text = textAmount
     if (textAmount?.startsWith("-") == true) {
-        view.setTextColor(view.context.resources.getColor(android.R.color.holo_red_dark, null))
+        view.setTextColor(ContextCompat.getColor(view.context, android.R.color.holo_red_dark))
+        view.tag = "red"
     } else if (textAmount?.startsWith("+") == true) {
-        view.setTextColor(view.context.resources.getColor(android.R.color.holo_green_light, null))
+        view.setTextColor(ContextCompat.getColor(view.context, android.R.color.holo_green_light))
+        view.tag = "green"
     } else {
-        view.setTextColor(view.context.resources.getColor(android.R.color.darker_gray, null))
+        view.setTextColor(ContextCompat.getColor(view.context, android.R.color.darker_gray))
+        view.tag = "gray"
     }
 }

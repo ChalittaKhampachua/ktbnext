@@ -67,4 +67,14 @@ dependencies {
 
     //Network
     implementation "com.google.code.gson:gson:$gson_version"
+
+    //Unit Test
+    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation "io.mockk:mockk-android:$mockk_version"
+    testImplementation "androidx.test:core:$test_version"
+    testImplementation "androidx.test:runner:$test_version"
+    testImplementation "androidx.test:rules:$test_version"
+    testImplementation "androidx.arch.core:core-testing:$archcore_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation "org.robolectric:robolectric:$robolectric_version"
 }
