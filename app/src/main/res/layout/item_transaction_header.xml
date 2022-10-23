@@ -2,12 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-        <variable
-            name="onClickMenuOption"
-            type="android.view.View.OnClickListener" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,26 +10,15 @@
 
         <TextView
             android:id="@+id/text_deposit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_micro"
-            android:text="@string/deposit"
+            android:text="@string/transactions"
             android:textStyle="bold"
             android:textSize="@dimen/text_xlarge"
             android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="@id/image_menu"
-            app:layout_constraintBottom_toBottomOf="@id/image_menu"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <ImageView
-            android:id="@+id/image_menu"
-            android:layout_width="@dimen/image_icon_normal"
-            android:layout_height="@dimen/image_icon_normal"
-            android:padding="@dimen/spacing_micro"
-            android:src="@drawable/ic_menu_option"
-            android:onClick="@{onClickMenuOption}"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@ class TransactionMapper : Mapper<TransactionEntity, List<Transaction>> {
         with(input) {
             return listOf(
                 Transaction(
-                    name = "Transfer Out",
+                    id = 1,
+                    name = "Transfer out",
                     date = "20 Nov 2019 - 12:00",
                     amount = "-1,500.00",
                     fromAccountBank = "Krungthai",
@@ -17,6 +18,7 @@ class TransactionMapper : Mapper<TransactionEntity, List<Transaction>> {
                     fromAccountName = "Nils Kizzie"
                 ),
                 Transaction(
+                    id = 2,
                     name = "Transfer PromptPay",
                     date = "20 Nov 2019 - 11:40",
                     amount ="-2,500.00",
@@ -25,6 +27,7 @@ class TransactionMapper : Mapper<TransactionEntity, List<Transaction>> {
                     fromAccountName = "Maram Uaithne"
                 ),
                 Transaction(
+                    id = 3,
                     name = "Transfer in",
                     date = "20 Nov 2019 - 10:30",
                     amount = "+3,500.00",

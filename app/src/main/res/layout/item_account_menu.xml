@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="listenerOnClickMenu"
+            type="com.ktb.ktbnext.screen.account.controller.listener.OnClickMenuWidgetListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/spacing_small"
+            android:layout_marginHorizontal="@dimen/spacing_normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardElevation="@dimen/elevation_small"
+            app:cardCornerRadius="@dimen/corner_normal"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/spacing_small"
+                android:paddingVertical="@dimen/spacing_normal">
+
+                <include
+                    android:id="@+id/view_menu_transfer"
+                    layout="@layout/view_account_menu"
+                    app:iconRes="@{@drawable/ic_transfer}"
+                    app:nameRes="@{@string/menu_transfer}"
+                    app:listener="@{listenerOnClickMenu.listenerTransfer}"/>
+
+                <include
+                    android:id="@+id/view_menu_top_up"
+                    layout="@layout/view_account_menu"
+                    app:iconRes="@{@drawable/ic_top_up}"
+                    app:nameRes="@{@string/menu_top_up}"
+                    app:listener="@{listenerOnClickMenu.listenerTopUp}"/>
+
+                <include
+                    android:id="@+id/view_menu_pay_bills"
+                    layout="@layout/view_account_menu"
+                    app:iconRes="@{@drawable/ic_pay_bills}"
+                    app:nameRes="@{@string/menu_pay_bills}"
+                    app:listener="@{listenerOnClickMenu.listenerPayBills}"/>
+
+                <include
+                    android:id="@+id/view_menu_more"
+                    layout="@layout/view_account_menu"
+                    app:iconRes="@{@drawable/ic_more}"
+                    app:nameRes="@{@string/menu_more}"
+                    app:listener="@{listenerOnClickMenu.listenerMore}"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="iconRes"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="nameRes"
+            type="String" />
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_small"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{listener}">
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="@dimen/image_icon_normal"
+            android:layout_height="@dimen/image_icon_normal"
+            android:src="@{iconRes}"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/text_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:text="@{nameRes}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"
+            tools:text="Icon"/>
+
+    </LinearLayout>
+</layout>

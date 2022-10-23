@@ -6,7 +6,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 fun featureAccountModule() = module {
-    viewModel { AccountViewModel() }
+    viewModel { AccountViewModel(get(), get()) }
 
     factory { AccountController() }
 }

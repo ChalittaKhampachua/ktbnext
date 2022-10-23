@@ -13,5 +13,13 @@
     <string name="main">Main</string>
     <string name="current_balance_thb">Current Balance (THB)</string>
     <string name="available_balance_thb">Available balance (THB)</string>
+    <string name="menu_transfer">Transfer</string>
+    <string name="menu_top_up">Top Up</string>
+    <string name="menu_pay_bills">Pay Bills</string>
+    <string name="menu_more">More</string>
+    <string name="transactions">Transactions</string>
+    <string name="from_account_no">From account no.</string>
+    <string name="from_account_name">From account name</string>
+    <string name="request_statement">Request Statement</string>
 
 </resources>

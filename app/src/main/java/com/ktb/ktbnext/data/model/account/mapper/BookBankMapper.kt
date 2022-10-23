@@ -9,6 +9,7 @@ class BookBankMapper : Mapper<BookBankEntity, List<BookBank>> {
         with(input) {
             return listOf(
                 BookBank(
+                    id = 1,
                     name="Margaretta Amanda",
                     type="Savings",
                     number="XXX-X-XX555-1",
@@ -17,6 +18,7 @@ class BookBankMapper : Mapper<BookBankEntity, List<BookBank>> {
                     availableBalance="68,000.33"
                 ),
                 BookBank(
+                    id = 2,
                     name="Agnes Mariette",
                     type="Current",
                     number="XXX-X-XX565-9",
@@ -25,6 +27,7 @@ class BookBankMapper : Mapper<BookBankEntity, List<BookBank>> {
                     availableBalance="5,000.99"
                 ),
                 BookBank(
+                    id = 3,
                     name="Eberhard Yarik",
                     type="Savings",
                     number="XXX-X-XX123-8",
@@ -33,6 +36,7 @@ class BookBankMapper : Mapper<BookBankEntity, List<BookBank>> {
                     availableBalance="98,000.00"
                 ),
                 BookBank(
+                    id = 4,
                     name="Vesta Vasil",
                     type="Savings",
                     number="XXX-X-XX200-3",
@@ -41,6 +45,7 @@ class BookBankMapper : Mapper<BookBankEntity, List<BookBank>> {
                     availableBalance="80.98",
                 ),
                 BookBank(
+                    id = 5,
                     name="Jeptha Raymund",
                     type="Payroll",
                     number="XXX-X-XX985-4",
